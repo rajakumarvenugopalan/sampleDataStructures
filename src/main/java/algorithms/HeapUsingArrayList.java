@@ -9,7 +9,7 @@ public class HeapUsingArrayList<T extends Comparable> {
     private SORT_TYPE sortType;
 
     public HeapUsingArrayList() {
-        this(SORT_TYPE.ASCENDING_ORDER);
+        this(SORT_TYPE.MIN_HEAP);
     }
 
     public HeapUsingArrayList(SORT_TYPE sortType) {
@@ -39,8 +39,8 @@ public class HeapUsingArrayList<T extends Comparable> {
     }
 
     public enum SORT_TYPE {
-        ASCENDING_ORDER (1),
-        DESCENDING_ORDER (-1);
+        MIN_HEAP (1),
+        MAX_HEAP (-1);
 
         int sortType;
 

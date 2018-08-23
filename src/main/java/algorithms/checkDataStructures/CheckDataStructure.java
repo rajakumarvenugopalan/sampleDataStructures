@@ -41,7 +41,7 @@ public class CheckDataStructure {
         }
 
         Thread.sleep(1000);
-        HeapUsingArrayList<Integer> heapUsingArrayList = new HeapUsingArrayList<Integer>(HeapUsingArrayList.SORT_TYPE.DESCENDING_ORDER);
+        HeapUsingArrayList<Integer> heapUsingArrayList = new HeapUsingArrayList<Integer>(HeapUsingArrayList.SORT_TYPE.MAX_HEAP);
         heapUsingArrayList.push(5);
         heapUsingArrayList.push(3);
         heapUsingArrayList.push(8);
