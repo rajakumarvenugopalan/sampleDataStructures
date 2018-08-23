@@ -38,7 +38,7 @@ public class HeapUsingArrayList<T extends Comparable> {
         }
     }
 
-    enum SORT_TYPE {
+    public enum SORT_TYPE {
         ASCENDING_ORDER (1),
         DESCENDING_ORDER (-1);
 
@@ -150,35 +150,4 @@ public class HeapUsingArrayList<T extends Comparable> {
         else
             return inputItems.toString();
     }
-
-    public static void main(String... args) throws InterruptedException{
-        HeapUsingArrayList<Integer> heapUsingArrayList = new HeapUsingArrayList<Integer>(SORT_TYPE.DESCENDING_ORDER);
-        heapUsingArrayList.push(5);
-        heapUsingArrayList.push(3);
-        heapUsingArrayList.push(8);
-        heapUsingArrayList.push(1);
-        heapUsingArrayList.push(10);
-        heapUsingArrayList.push(20);
-        heapUsingArrayList.push(15);
-        heapUsingArrayList.push(11);
-        heapUsingArrayList.push(10);
-        heapUsingArrayList.push(3);
-        heapUsingArrayList.push(7);
-        heapUsingArrayList.push(50);
-        heapUsingArrayList.push(400);
-
-        System.out.println(heapUsingArrayList);
-
-        Integer object = null;
-        StringBuilder sb = new StringBuilder();
-        sb.append(heapUsingArrayList.toString() + "\n");
-        while((object = heapUsingArrayList.pop()) != null)
-        {
-            System.out.println(object);
-            sb.append(heapUsingArrayList.toString() + "\n");
-        }
-        Thread.sleep(1000);
-        System.err.println(sb.toString());
-    }
-
 }
