@@ -79,9 +79,6 @@ public class HeapUsingArrayList<T extends Comparable> {
             return sortType;
         }
 
-        public void setSortType(int sortType) {
-            this.sortType = sortType;
-        }
     }
 
     /**
