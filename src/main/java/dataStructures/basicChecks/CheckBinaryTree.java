@@ -1,7 +1,7 @@
-package algorithms.checkDataStructures;
+package dataStructures.basicChecks;
 
-import algorithms.BinarySearchTree;
-import algorithms.exceptions.DSStandardException;
+import dataStructures.BinarySearchTree;
+import dataStructures.exceptions.DSStandardException;
 
 public class CheckBinaryTree {
 

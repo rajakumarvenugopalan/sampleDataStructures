@@ -1,4 +1,4 @@
-package algorithms;
+package dataStructures;
 
 import java.util.ArrayList;
 import java.util.List;

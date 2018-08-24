@@ -1,8 +1,8 @@
-package algorithms.checkDataStructures;
+package dataStructures.basicChecks;
 
-import algorithms.MinAndMaxHeap;
-import algorithms.StackAndQueue;
-import algorithms.exceptions.DSStandardException;
+import dataStructures.MinAndMaxHeap;
+import dataStructures.StackAndQueue;
+import dataStructures.exceptions.DSStandardException;
 
 public class CheckDataStructure {
 
