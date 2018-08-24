@@ -155,7 +155,7 @@ public class MinAndMaxHeap<T extends Comparable> {
     {
         if(leftChild == null && rightChild == null)
         {
-            return 0;
+            return NO_NEED_TO_SWAP;
         }
         else if(rightChild == null)
         {
