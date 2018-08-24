@@ -1,4 +1,4 @@
-package dataStructures.basicChecks;
+package basicChecks;
 
 import dataStructures.ActorMovieRelationModel;
 import dataStructures.Graph;
