@@ -3,7 +3,7 @@ package algorithms;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HeapUsingArrayList<T extends Comparable> {
+public class MinAndMaxHeap<T extends Comparable> {
 
     private List<T> inputItems = new ArrayList<>();
     private SORT_TYPE sortType;
@@ -15,7 +15,7 @@ public class HeapUsingArrayList<T extends Comparable> {
      * By Default create a Min Heap
      *
      * */
-    public HeapUsingArrayList() {
+    public MinAndMaxHeap() {
         this(SORT_TYPE.MIN_HEAP);
     }
 
@@ -23,7 +23,7 @@ public class HeapUsingArrayList<T extends Comparable> {
      * Create a Min or Max Heap based on the argument passed
      *
      * */
-    public HeapUsingArrayList(SORT_TYPE sortType) {
+    public MinAndMaxHeap(SORT_TYPE sortType) {
         this.sortType = sortType;
     }
 

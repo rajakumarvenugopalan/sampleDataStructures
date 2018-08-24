@@ -2,7 +2,7 @@ package algorithms;
 
 import algorithms.exceptions.DSStandardException;
 
-public class StackQueueUsingLinkedList<T> {
+public class StackAndQueue<T> {
 
     private Node headElement;
     private Node lastElement;
@@ -12,7 +12,7 @@ public class StackQueueUsingLinkedList<T> {
      * By Default create a Queue
      *
      * */
-    public StackQueueUsingLinkedList() {
+    public StackAndQueue() {
         this(TYPE.QUEUE);
     }
 
@@ -20,7 +20,7 @@ public class StackQueueUsingLinkedList<T> {
      * Create a Stack or Queue based on the argument passed.
      *
      * */
-    public StackQueueUsingLinkedList(TYPE type) {
+    public StackAndQueue(TYPE type) {
         this.type = type;
     }
 
