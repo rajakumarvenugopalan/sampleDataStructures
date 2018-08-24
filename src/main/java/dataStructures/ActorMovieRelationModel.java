@@ -53,10 +53,10 @@ public class ActorMovieRelationModel {
                 else {
                     nextMovie.setVisited(true);
                     for(Object nextActor: nextMovie.getEdges()) {
-                    if(actor2Vertice.equals(((Graph.Edge)nextActor).getToNode())) {
-                        return actor1 + " and " + actor2 + " has " + friendshipLevel + " friendship";
-                    }
-                    actorNames.add(((Graph.Edge)nextActor).getToNode());
+                        if(actor2Vertice.equals(((Graph.Edge)nextActor).getToNode())) {
+                            return actor1 + " and " + actor2 + " has " + friendshipLevel + " friendship";
+                        }
+                        actorNames.add(((Graph.Edge)nextActor).getToNode());
                     }
                 }
             }
