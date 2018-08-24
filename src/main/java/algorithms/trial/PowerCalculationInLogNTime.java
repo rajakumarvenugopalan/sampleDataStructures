@@ -7,6 +7,16 @@ public class PowerCalculationInLogNTime {
 
     private static volatile Map<BasePower, Double> storedPowers = new HashMap<>();
 
+    /**
+     *
+     * For Calculating the Power of a Number, we can calculate the Binary String of the number and calculate only for needed powers.
+     * E.g 50 ^ 50 can be calculated as (50 ^ 32) * (50 ^ 16) * (50 ^ 2)    (Binary String of 50 = 110010)
+     * E.g 50 ^ 47 can be calculated as (50 ^ 32) * (50 ^ 8) * (50 ^ 4) * (50 ^ 2) * (50 ^ 1)   (Binary String of 47 = 101111)
+     * When the method execution starts I put the powers of base with 0 and 1 in the hashmap, the power of base with 2 is calculated by
+     * multiplying the base with power 1 twice and stored in map. further calculation of base with power 4 is calculated using the stored
+     * value of base with power 2 and it goes on until we reach with the required values for finding the actual result.
+     *
+     * */
     public Double findPower(int base, int power) {
         storedPowers.putIfAbsent(new BasePower(base, 0), 1.0);
         storedPowers.putIfAbsent(new BasePower(base, 1), (double)base);
@@ -15,17 +25,19 @@ public class PowerCalculationInLogNTime {
         while(power > 0) {
             int remainder = power % 2;
             double currentPower;
-            if(storedPowers.get(new BasePower(base, counter)) == null) {
-                currentPower = storedPowers.get(new BasePower(base, counter / 2)) *
-                        storedPowers.get(new BasePower(base, counter / 2));
+            BasePower basePowerWithCounter = new BasePower(base, counter);
+            if(storedPowers.get(basePowerWithCounter) == null) {
+                BasePower basePowerWithHalfCounter = new BasePower(base, counter / 2);
+                currentPower = storedPowers.get(basePowerWithHalfCounter) *
+                        storedPowers.get(basePowerWithHalfCounter);
             }
             else {
-                currentPower = storedPowers.get(new BasePower(base, counter));
+                currentPower = storedPowers.get(basePowerWithCounter);
             }
             if(remainder == 1) {
                 result *= currentPower;
             }
-            storedPowers.putIfAbsent(new BasePower(base, counter), currentPower);
+            storedPowers.putIfAbsent(basePowerWithCounter, currentPower);
             counter *= 2;
             power /= 2;
         }
@@ -71,6 +83,6 @@ public class PowerCalculationInLogNTime {
     }
 
     public static void main(String... args) {
-        System.out.println(new PowerCalculationInLogNTime().findPower(50, 50));
+        System.out.println(new PowerCalculationInLogNTime().findPower(50, 40));
     }
 }
