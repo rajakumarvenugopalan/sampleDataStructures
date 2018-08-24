@@ -1,7 +1,7 @@
 package algorithms.sort;
 
 import dataStructures.MinAndMaxHeap;
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 import java.util.HashMap;
 import java.util.HashSet;

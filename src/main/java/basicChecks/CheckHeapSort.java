@@ -2,7 +2,7 @@ package basicChecks;
 
 import algorithms.sort.HeapSort;
 import dataStructures.MinAndMaxHeap;
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 import java.util.Arrays;
 import java.util.List;

@@ -2,7 +2,7 @@ package basicChecks;
 
 import dataStructures.MinAndMaxHeap;
 import dataStructures.StackAndQueue;
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 public class CheckDataStructure {
 

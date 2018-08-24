@@ -1,7 +1,7 @@
 package basicChecks;
 
 import dataStructures.BinarySearchTree;
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 public class CheckBinaryTree {
 

@@ -1,4 +1,4 @@
-package dataStructures.exceptions;
+package exceptions;
 
 public class DSStandardException extends Exception {
 

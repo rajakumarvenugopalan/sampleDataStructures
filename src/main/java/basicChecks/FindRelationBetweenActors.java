@@ -2,7 +2,7 @@ package basicChecks;
 
 import dataStructures.ActorMovieRelationModel;
 import dataStructures.Graph;
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 import java.util.Arrays;
 

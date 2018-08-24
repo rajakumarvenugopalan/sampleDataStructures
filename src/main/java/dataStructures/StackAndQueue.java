@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.exceptions.DSStandardException;
+import exceptions.DSStandardException;
 
 public class StackAndQueue<T> {
 
