@@ -4,6 +4,8 @@ import exceptions.DSStandardException;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -50,7 +52,33 @@ public class Graph<T> {
         }
     }
 
-    class Vertice {
+    public List<T> depthFirstSearch() throws DSStandardException{
+        if(this.isBiDirectionalGraph) {
+            throw new DSStandardException("Depth First Search cannot be done for Undirected Graphs");
+        }
+        List<T> output = new LinkedList<>();
+        for(T key : vertices.keySet()) {
+            output = traverseUntilNoDependency(find(key), output);
+        }
+
+        return output;
+    }
+
+    private List<T> traverseUntilNoDependency(Graph.Vertice currentVertice, List<T> elements) {
+        if(currentVertice!= null) {
+            if(currentVertice.getEdges() != null && !currentVertice.isVisited()) {
+                for(Object currentEdge: currentVertice.getEdges()) {
+                    Graph.Vertice childVertice = ((Graph.Edge)currentEdge).getToNode();
+                    elements = traverseUntilNoDependency(childVertice, elements);
+                }
+                elements.add((T) currentVertice.getValue());
+                currentVertice.setVisited(true);
+            }
+        }
+        return elements;
+    }
+
+    public class Vertice {
         private T value;
         private Set<Edge> edges = new HashSet<>();
         private boolean isVisited = false;
@@ -95,7 +123,7 @@ public class Graph<T> {
         }
     }
 
-    class Edge {
+    public class Edge {
         private Vertice toNode;
         private int distance;
 

@@ -23,7 +23,8 @@ Sort:
 Search:
   * Binary Search (Arrays, Trees)
   * Sequential Search
-  * BFS and DFS For Graphs
+  * Breadth First Search (Graph) (sampleDataStructures/src/main/java/basicChecks/FindRelationBetweenActors.java)
+  * Depth First Search (Graph) (sampleDataStructures/src/main/java/basicChecks/GraphDepthFirstSearch.java)
 
 Interesting Problems:
 -------------------------
