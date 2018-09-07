@@ -19,6 +19,7 @@ Sort:
   * Heap Sort (sampleDataStructures/src/main/java/algorithms/sort/HeapSort.java)
   * Merge Sort (sampleDataStructures/src/main/java/algorithms/sort/MergeSort.java)
   * Quick Sort
+  * Shell Sort (sampleDataStructures/src/main/java/algorithms/sort/ShellSort.java)
 
 Search:
   * Binary Search (Arrays, Trees)
@@ -31,5 +32,6 @@ Interesting Problems:
   * Finding the relation between two actors (sampleDataStructures/src/main/java/dataStructures/ActorMovieRelationModel.java - implemented in One way BFS, later will try to do it in Two way BFS)
   * Calculating the power of a number in log n time  (sampleDataStructures/src/main/java/algorithms/trial/PowerCalculationInLogNTime.java)
   * Stair Case problem (sampleDataStructures/src/main/java/algorithms/trial/StairCasePobablities.java)
+  * Splitting the input into words from dictionary (sampleDataStructures/src/main/java/algorithms/trial/FindDictionaryMatchingWords.java)
   
 Whenever you feel there is a possibility / room for improvement, please raise a Pull Request or send me a suggestion. Will be happy to learn and provide the modified Implementation. 
