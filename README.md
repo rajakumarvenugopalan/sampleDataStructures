@@ -10,6 +10,8 @@ Data Structures:
   * Heap / Priority Queue (sampleDataStructures/src/main/java/dataStructures/MinAndMaxHeap.java)
   * Binary Search Tree (sampleDataStructures/src/main/java/dataStructures/BinarySearchTree.java)
   * Graphs (sampleDataStructures/src/main/java/dataStructures/Graph.java)
+  * DoubleLinkedList (sampleDataStructures/src/main/java/dataStructures/DoubleLinkedList.java)
+  * LRUCache (sampleDataStructures/src/main/java/dataStructures/LRUCache.java)
 
 Algorithms:
 --------------------------
